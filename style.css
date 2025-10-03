@@ -1,0 +1,460 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  scroll-behavior: smooth;
+  background-color: #fdfdfd;
+  color: #333;
+}
+
+/* Navbar */
+header {
+  position: fixed;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #f5b642;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Home Section */
+.home {
+  height: 100vh;
+  background: url('https://img.freepik.com/free-photo/blur-photo-workplace-with-camera-memory-cards-foreground-modern-computer-stands-white-table-with-notebook-pen-lying-beside_197531-3412.jpg?semt=ais_hybrid&w=740&q=80') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-content h1 span {
+  color: #f5b642;
+}
+
+.hero-content p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.btn {
+  display: inline-block;
+  background: #f5b642;
+  color: #000;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #ffc857;
+}
+
+/* ✅ About Section - Cinematic */
+.about-new {
+  position: relative;
+  padding: 100px 50px;
+  background: linear-gradient(135deg, #1b1b1b, #333);
+  color: #fff;
+  overflow: hidden;
+  
+}
+
+.about-overlay {
+  position: absolute;
+  inset: 0;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png');
+  opacity: 0.15;
+}
+
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.about-photo img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  object-fit: cover;
+}
+
+.about-info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.about-info h2 span {
+  color: #f5b642;
+}
+
+.about-info p {
+  margin-bottom: 15px;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.about-info .highlight {
+  color: #f5b642;
+  font-weight: 600;
+}
+
+.about-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: linear-gradient(45deg, #f5b642, #ffd56b);
+  color: #000;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(245, 182, 66, 0.5);
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: fadeInLeft 1s ease forwards;
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  animation: fadeInRight 1s ease forwards;
+}
+
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ===========================
+   SERVICES SECTION - Stunning Style
+=========================== */
+.services-section {
+  padding: 100px 50px;
+  background: linear-gradient(135deg, #1f1c2c 0%, #928dab 100%);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png');
+  opacity: 0.15;
+  top: 0;
+  left: 0;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.4);
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+  opacity: 0.85;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  transform: translateY(40px);
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.service-card.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.service-image {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.service-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  opacity: 0.8;
+}
+
+.service-card:hover .service-image img {
+  transform: scale(1.15) rotate(2deg);
+}
+
+.service-content {
+  padding: 25px;
+  text-align: left;
+}
+
+.service-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #f5b642;
+}
+
+.service-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #e5e5e5;
+}
+
+.service-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background: linear-gradient(45deg, #f5b642, #ffd56b);
+  color: #000;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(245, 182, 66, 0.5);
+}
+
+/* Contact */
+/* Contact Section Redesigned */
+.contact {
+  position: relative;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #f5b642, #ffd56b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #1b1b1b;
+  overflow: hidden;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.contact-overlay {
+  position: absolute;
+  inset: 0;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png');
+  opacity: 0.05;
+  z-index: 0;
+}
+
+.contact-container {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  width: 100%;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px 20px;
+  border-radius: 15px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 140px;
+}
+
+.btn-contact {
+  padding: 15px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #1b1b1b, #333);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-contact:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #000;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: rgba(0,0,0,0.9);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    text-align: right;
+    padding: 20px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .about-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-photo img {
+    max-width: 100%;
+  }
+
+  .service-content {
+    text-align: center;
+  }
+}
